@@ -27,6 +27,7 @@ function vih_long_course_user_default_permissions() {
     'name' => 'delete any vih_long_course content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'kontor',
     ),
     'module' => 'node',
   );

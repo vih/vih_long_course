@@ -114,16 +114,13 @@ function vih_long_course_field_default_fields() {
             ),
           ),
           'sort' => array(
-            'direction' => 'ASC',
-            'field' => 'body:value',
-            'property' => 'nid',
             'type' => 'none',
           ),
           'target_bundles' => array(
             'employee_context' => 'employee_context',
           ),
         ),
-        'handler_submit' => 'Skift handler',
+        'handler_submit' => 'Change handler',
         'target_type' => 'node',
       ),
       'translatable' => '0',
@@ -195,6 +192,8 @@ function vih_long_course_field_default_fields() {
       'locked' => '0',
       'module' => 'date',
       'settings' => array(
+        'cache_count' => '4',
+        'cache_enabled' => 0,
         'granularity' => array(
           'day' => 'day',
           'hour' => 'hour',
@@ -368,7 +367,7 @@ function vih_long_course_field_default_fields() {
       'locked' => '0',
       'module' => 'image',
       'settings' => array(
-        'default_image' => '178',
+        'default_image' => 0,
         'uri_scheme' => 'public',
       ),
       'translatable' => '1',
