@@ -17,7 +17,7 @@ function vih_long_course_default_page_manager_handlers() {
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = 3;
+  $handler->weight = -26;
   $handler->conf = array(
     'title' => 'Long courses',
     'no_blocks' => 0,
@@ -177,38 +177,6 @@ function vih_long_course_default_page_manager_handlers() {
     $pane = new stdClass();
     $pane->pid = 'new-1';
     $pane->panel = 'middle';
-    $pane->type = 'block';
-    $pane->subtype = 'workbench-block';
-    $pane->shown = TRUE;
-    $pane->access = array(
-      'plugins' => array(
-        0 => array(
-          'name' => 'perm',
-          'settings' => array(
-            'perm' => 'view moderation messages',
-          ),
-          'context' => 'logged-in-user',
-          'not' => FALSE,
-        ),
-      ),
-    );
-    $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['middle'][0] = 'new-1';
-    $pane = new stdClass();
-    $pane->pid = 'new-2';
-    $pane->panel = 'middle';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_course_time';
     $pane->shown = TRUE;
@@ -233,12 +201,12 @@ function vih_long_course_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['middle'][1] = 'new-2';
+    $display->content['new-1'] = $pane;
+    $display->panels['middle'][0] = 'new-1';
     $pane = new stdClass();
-    $pane->pid = 'new-3';
+    $pane->pid = 'new-2';
     $pane->panel = 'middle';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:body';
@@ -258,12 +226,12 @@ function vih_long_course_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 1;
     $pane->locks = '';
-    $display->content['new-3'] = $pane;
-    $display->panels['middle'][2] = 'new-3';
+    $display->content['new-2'] = $pane;
+    $display->panels['middle'][1] = 'new-2';
     $pane = new stdClass();
-    $pane->pid = 'new-4';
+    $pane->pid = 'new-3';
     $pane->panel = 'middle';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_picture';
@@ -286,12 +254,12 @@ function vih_long_course_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 2;
     $pane->locks = '';
-    $display->content['new-4'] = $pane;
-    $display->panels['middle'][3] = 'new-4';
+    $display->content['new-3'] = $pane;
+    $display->panels['middle'][2] = 'new-3';
     $pane = new stdClass();
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-4';
     $pane->panel = 'middle';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_registration_payment';
@@ -314,6 +282,34 @@ function vih_long_course_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $display->content['new-4'] = $pane;
+    $display->panels['middle'][3] = 'new-4';
+    $pane = new stdClass();
+    $pane->pid = 'new-5';
+    $pane->panel = 'middle';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_weekly_payment';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'inline',
+      'formatter' => 'number_integer',
+      'formatter_settings' => array(
+        'thousand_separator' => '.',
+        'prefix_suffix' => 1,
+      ),
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
     $pane->position = 4;
     $pane->locks = array();
     $display->content['new-5'] = $pane;
@@ -322,7 +318,7 @@ function vih_long_course_default_page_manager_handlers() {
     $pane->pid = 'new-6';
     $pane->panel = 'middle';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_weekly_payment';
+    $pane->subtype = 'node:field_material_payment';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -350,7 +346,7 @@ function vih_long_course_default_page_manager_handlers() {
     $pane->pid = 'new-7';
     $pane->panel = 'middle';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_material_payment';
+    $pane->subtype = 'node:field_travel_payment';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -376,34 +372,6 @@ function vih_long_course_default_page_manager_handlers() {
     $display->panels['middle'][6] = 'new-7';
     $pane = new stdClass();
     $pane->pid = 'new-8';
-    $pane->panel = 'middle';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_travel_payment';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'label' => 'inline',
-      'formatter' => 'number_integer',
-      'formatter_settings' => array(
-        'thousand_separator' => '.',
-        'prefix_suffix' => 1,
-      ),
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 7;
-    $pane->locks = array();
-    $display->content['new-8'] = $pane;
-    $display->panels['middle'][7] = 'new-8';
-    $pane = new stdClass();
-    $pane->pid = 'new-9';
     $pane->panel = 'middle';
     $pane->type = 'views';
     $pane->subtype = 'employees_context';
@@ -434,12 +402,12 @@ function vih_long_course_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 8;
+    $pane->position = 7;
     $pane->locks = array();
-    $display->content['new-9'] = $pane;
-    $display->panels['middle'][8] = 'new-9';
+    $display->content['new-8'] = $pane;
+    $display->panels['middle'][7] = 'new-8';
     $pane = new stdClass();
-    $pane->pid = 'new-10';
+    $pane->pid = 'new-9';
     $pane->panel = 'middle';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_webform';
@@ -461,10 +429,10 @@ function vih_long_course_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 9;
+    $pane->position = 8;
     $pane->locks = array();
-    $display->content['new-10'] = $pane;
-    $display->panels['middle'][9] = 'new-10';
+    $display->content['new-9'] = $pane;
+    $display->panels['middle'][8] = 'new-9';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
