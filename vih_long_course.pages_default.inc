@@ -273,8 +273,8 @@ function vih_long_course_default_page_manager_handlers() {
         'prefix_suffix' => 1,
       ),
       'context' => 'argument_entity_id:node_1',
-      'override_title' => 1,
-      'override_title_text' => 'Priser',
+      'override_title' => 0,
+      'override_title_text' => 'Tilmeldingsgebyr',
     );
     $pane->cache = array();
     $pane->style = array(
