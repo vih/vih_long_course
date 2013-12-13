@@ -33,7 +33,7 @@ function vih_long_course_field_group_info() {
       'formatter' => 'collapsible',
       'instance_settings' => array(
         'description' => '',
-        'classes' => '',
+        'classes' => ' group-prices field-group-fieldset',
       ),
     ),
   );
@@ -62,7 +62,7 @@ function vih_long_course_field_group_info() {
       'formatter' => 'collapsible',
       'instance_settings' => array(
         'description' => '',
-        'classes' => '',
+        'classes' => ' group-prices field-group-fieldset',
         'required_fields' => 1,
       ),
     ),

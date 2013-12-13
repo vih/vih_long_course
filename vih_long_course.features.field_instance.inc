@@ -24,6 +24,12 @@ function vih_long_course_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 1,
       ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'rss' => array(
         'label' => 'hidden',
         'settings' => array(),
@@ -75,6 +81,12 @@ function vih_long_course_field_default_field_instances() {
         ),
         'type' => 'entityreference_label',
         'weight' => 4,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'rss' => array(
         'label' => 'above',
@@ -130,6 +142,12 @@ function vih_long_course_field_default_field_instances() {
           'multiple_to' => '',
         ),
         'type' => 'date_default',
+        'weight' => 0,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
       ),
       'rss' => array(
@@ -204,6 +222,12 @@ function vih_long_course_field_default_field_instances() {
         'type' => 'number_integer',
         'weight' => 6,
       ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'rss' => array(
         'label' => 'above',
         'settings' => array(),
@@ -252,6 +276,12 @@ function vih_long_course_field_default_field_instances() {
         ),
         'type' => 'image',
         'weight' => 2,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'rss' => array(
         'label' => 'hidden',
@@ -327,6 +357,12 @@ function vih_long_course_field_default_field_instances() {
         'type' => 'number_integer',
         'weight' => 4,
       ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'rss' => array(
         'label' => 'above',
         'settings' => array(),
@@ -383,6 +419,12 @@ function vih_long_course_field_default_field_instances() {
         'type' => 'number_integer',
         'weight' => 7,
       ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'rss' => array(
         'label' => 'above',
         'settings' => array(),
@@ -432,6 +474,12 @@ function vih_long_course_field_default_field_instances() {
         ),
         'type' => 'entityreference_entity_view',
         'weight' => 5,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'rss' => array(
         'label' => 'hidden',
@@ -486,6 +534,12 @@ function vih_long_course_field_default_field_instances() {
         ),
         'type' => 'number_integer',
         'weight' => 5,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'rss' => array(
         'label' => 'above',

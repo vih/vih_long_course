@@ -343,6 +343,8 @@ function vih_long_course_views_default_views() {
   $handler->display->display_options['filters']['field_course_time_value']['group'] = 1;
   $handler->display->display_options['filters']['field_course_time_value']['default_date'] = 'now -30 day';
   $handler->display->display_options['filters']['field_course_time_value']['year_range'] = '-0:+3';
+  $handler->display->display_options['pane_category']['name'] = 'VIH Admin';
+  $handler->display->display_options['pane_category']['weight'] = '0';
 
   /* Display: Økonomi */
   $handler = $view->new_display('block', 'Økonomi', 'block_2');
@@ -433,6 +435,8 @@ function vih_long_course_views_default_views() {
 
   /* Display: Side */
   $handler = $view->new_display('page', 'Side', 'page_1');
+  $handler->display->display_options['defaults']['cache'] = FALSE;
+  $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
@@ -575,7 +579,7 @@ function vih_long_course_views_default_views() {
     t('Tabel'),
     t('Content pane'),
     t('Udgivet'),
-    t('View panes'),
+    t('VIH Admin'),
     t('Økonomi'),
     t('Prisoversigt'),
     t('Tilmeldingsgebyr'),

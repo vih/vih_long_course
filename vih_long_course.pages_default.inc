@@ -21,7 +21,7 @@ function vih_long_course_default_page_manager_handlers() {
   $handler->conf = array(
     'title' => 'Long courses',
     'no_blocks' => 0,
-    'pipeline' => 'standard',
+    'pipeline' => 'ipe',
     'css_id' => '',
     'css' => '',
     'contexts' => array(),
@@ -41,6 +41,8 @@ function vih_long_course_default_page_manager_handlers() {
       ),
       'logic' => 'and',
     ),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
   );
   $display = new panels_display();
   $display->layout = 'onecol';
@@ -399,6 +401,7 @@ function vih_long_course_default_page_manager_handlers() {
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
+      'style' => 'vih_box_highlight',
     );
     $pane->css = array();
     $pane->extras = array();
