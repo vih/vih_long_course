@@ -17,7 +17,6 @@ dependencies[] = page_manager
 dependencies[] = strongarm
 dependencies[] = views
 dependencies[] = vih_core
-dependencies[] = vih_calendar
 dependencies[] = webform
 datestamp = 1331278554
 features[ctools][] = field_group:field_group:1
