@@ -308,6 +308,7 @@ function vih_long_course_field_default_field_instances() {
       'focus' => 0,
       'focus_lock_ratio' => 0,
       'focus_min_size' => '',
+      'focus_required' => 0,
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '',
