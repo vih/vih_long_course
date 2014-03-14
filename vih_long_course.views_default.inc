@@ -555,6 +555,159 @@ function vih_long_course_views_default_views() {
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['name'] = 'management';
   $handler->display->display_options['menu']['context'] = 0;
+
+  /* Display: Economy */
+  $handler = $view->new_display('panel_pane', 'Economy', 'panel_pane_2');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Prisoversigt lange kurser';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'title' => 'title',
+    'field_course_time' => 'title',
+    'field_material_payment' => 'field_material_payment',
+    'field_travel_payment' => 'field_travel_payment',
+    'field_registration_payment' => 'field_registration_payment',
+    'field_weekly_payment' => 'field_weekly_payment',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_course_time' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_material_payment' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_travel_payment' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_registration_payment' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_weekly_payment' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Felt: Indhold: Titel */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['text'] = '<h3>[title]</h3>';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h4';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['title']['hide_alter_empty'] = FALSE;
+  /* Felt: Indhold: Tidspunkt */
+  $handler->display->display_options['fields']['field_course_time']['id'] = 'field_course_time';
+  $handler->display->display_options['fields']['field_course_time']['table'] = 'field_data_field_course_time';
+  $handler->display->display_options['fields']['field_course_time']['field'] = 'field_course_time';
+  $handler->display->display_options['fields']['field_course_time']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_course_time']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['fields']['field_course_time']['settings'] = array(
+    'format_type' => 'medium_date_without_time',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_repeat_rule' => 'show',
+  );
+  /* Felt: Indhold: Materialegebyr */
+  $handler->display->display_options['fields']['field_material_payment']['id'] = 'field_material_payment';
+  $handler->display->display_options['fields']['field_material_payment']['table'] = 'field_data_field_material_payment';
+  $handler->display->display_options['fields']['field_material_payment']['field'] = 'field_material_payment';
+  $handler->display->display_options['fields']['field_material_payment']['settings'] = array(
+    'thousand_separator' => ' ',
+    'prefix_suffix' => 1,
+  );
+  /* Felt: Indhold: Rejsebetaling */
+  $handler->display->display_options['fields']['field_travel_payment']['id'] = 'field_travel_payment';
+  $handler->display->display_options['fields']['field_travel_payment']['table'] = 'field_data_field_travel_payment';
+  $handler->display->display_options['fields']['field_travel_payment']['field'] = 'field_travel_payment';
+  $handler->display->display_options['fields']['field_travel_payment']['settings'] = array(
+    'thousand_separator' => ' ',
+    'prefix_suffix' => 1,
+  );
+  /* Felt: Indhold: Tilmeldingsgebyr */
+  $handler->display->display_options['fields']['field_registration_payment']['id'] = 'field_registration_payment';
+  $handler->display->display_options['fields']['field_registration_payment']['table'] = 'field_data_field_registration_payment';
+  $handler->display->display_options['fields']['field_registration_payment']['field'] = 'field_registration_payment';
+  $handler->display->display_options['fields']['field_registration_payment']['settings'] = array(
+    'thousand_separator' => ' ',
+    'prefix_suffix' => 1,
+  );
+  /* Felt: Indhold: Ugebetaling */
+  $handler->display->display_options['fields']['field_weekly_payment']['id'] = 'field_weekly_payment';
+  $handler->display->display_options['fields']['field_weekly_payment']['table'] = 'field_data_field_weekly_payment';
+  $handler->display->display_options['fields']['field_weekly_payment']['field'] = 'field_weekly_payment';
+  $handler->display->display_options['fields']['field_weekly_payment']['settings'] = array(
+    'thousand_separator' => ' ',
+    'prefix_suffix' => 1,
+  );
+  $handler->display->display_options['pane_category']['name'] = 'VIH Long Courses';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+
+  /* Display: Long courses overview */
+  $handler = $view->new_display('panel_pane', 'Long courses overview', 'panel_pane_3');
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filterkriterie: Indhold: Udgivet */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 0;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filterkriterie: Indhold: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'vih_long_course' => 'vih_long_course',
+  );
+  $handler->display->display_options['filters']['type']['group'] = '0';
+  /* Filterkriterie: Indhold: Tidspunkt -  startdato (field_course_time) */
+  $handler->display->display_options['filters']['field_course_time_value']['id'] = 'field_course_time_value';
+  $handler->display->display_options['filters']['field_course_time_value']['table'] = 'field_data_field_course_time';
+  $handler->display->display_options['filters']['field_course_time_value']['field'] = 'field_course_time_value';
+  $handler->display->display_options['filters']['field_course_time_value']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_course_time_value']['default_date'] = '-30 days';
+  $handler->display->display_options['filters']['field_course_time_value']['year_range'] = '-1:+3';
+  $handler->display->display_options['pane_category']['name'] = 'VIH Long Courses';
+  $handler->display->display_options['pane_category']['weight'] = '0';
   $translatables['lange_kurser'] = array(
     t('Master'),
     t('Lange kurser'),
@@ -587,6 +740,10 @@ function vih_long_course_views_default_views() {
     t('Materialegebyr'),
     t('Rejsebetaling'),
     t('Side'),
+    t('Economy'),
+    t('Prisoversigt lange kurser'),
+    t('VIH Long Courses'),
+    t('Long courses overview'),
   );
   $export['lange_kurser'] = $view;
 
