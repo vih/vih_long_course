@@ -272,7 +272,7 @@ function vih_long_course_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => 'content_width_wide',
+          'image_style' => 'vih_banner',
         ),
         'type' => 'image',
         'weight' => 2,
