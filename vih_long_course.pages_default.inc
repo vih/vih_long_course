@@ -246,7 +246,7 @@ function vih_long_course_default_page_manager_handlers() {
       'label' => 'hidden',
       'formatter' => 'image',
       'formatter_settings' => array(
-        'image_style' => 'content_width_wide',
+        'image_style' => 'vih_banner',
         'image_link' => '',
       ),
       'context' => 'argument_entity_id:node_1',
