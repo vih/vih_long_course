@@ -58,3 +58,5 @@ features[variable][] = node_options_vih_long_course
 features[variable][] = node_preview_vih_long_course
 features[variable][] = node_submitted_vih_long_course
 features[views_view][] = lange_kurser
+
+files[] = vih_long_course.migrate.inc

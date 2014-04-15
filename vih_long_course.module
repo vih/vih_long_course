@@ -5,3 +5,18 @@
  */
 
 include_once('vih_long_course.features.inc');
+
+/**
+ * Implements hook_migrate_api().
+ *
+ * @return array
+ */
+function vih_long_course_migrate_api() {
+  $api = array(
+    'api' => 2,
+    'migrations' => array(
+      'VIHLongCourseNode' => array('class_name' => 'VIHLongCourseNode'),
+    ),
+  );
+  return $api;
+}
