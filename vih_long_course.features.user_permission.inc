@@ -15,8 +15,8 @@ function vih_long_course_user_default_permissions() {
     'name' => 'create vih_long_course content',
     'roles' => array(
       'administrator' => 'administrator',
-      'kontor' => 'kontor',
-      'lærer' => 'lærer',
+      'office' => 'office',
+      'teacher' => 'teacher',
     ),
     'module' => 'node',
   );
@@ -26,7 +26,7 @@ function vih_long_course_user_default_permissions() {
     'name' => 'delete any vih_long_course content',
     'roles' => array(
       'administrator' => 'administrator',
-      'kontor' => 'kontor',
+      'office' => 'office',
     ),
     'module' => 'node',
   );
@@ -36,8 +36,8 @@ function vih_long_course_user_default_permissions() {
     'name' => 'delete own vih_long_course content',
     'roles' => array(
       'administrator' => 'administrator',
-      'kontor' => 'kontor',
-      'lærer' => 'lærer',
+      'office' => 'office',
+      'teacher' => 'teacher',
     ),
     'module' => 'node',
   );
@@ -47,8 +47,8 @@ function vih_long_course_user_default_permissions() {
     'name' => 'edit any vih_long_course content',
     'roles' => array(
       'administrator' => 'administrator',
-      'kontor' => 'kontor',
-      'lærer' => 'lærer',
+      'office' => 'office',
+      'teacher' => 'teacher',
     ),
     'module' => 'node',
   );
@@ -58,8 +58,8 @@ function vih_long_course_user_default_permissions() {
     'name' => 'edit own vih_long_course content',
     'roles' => array(
       'administrator' => 'administrator',
-      'kontor' => 'kontor',
-      'lærer' => 'lærer',
+      'office' => 'office',
+      'teacher' => 'teacher',
     ),
     'module' => 'node',
   );
