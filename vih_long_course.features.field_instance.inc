@@ -356,11 +356,12 @@ function vih_long_course_field_default_field_instances() {
           'vih_banner' => 'vih_banner',
         ),
         'manualcrop_styles_list' => array(
+          'panopoly_image_square' => 'panopoly_image_square',
           'vih_banner' => 'vih_banner',
+          'vih_quarter_square' => 'vih_quarter_square',
         ),
         'manualcrop_styles_mode' => 'include',
         'manualcrop_thumblist' => 1,
-        'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
       'weight' => 4,
