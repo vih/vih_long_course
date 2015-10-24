@@ -34,7 +34,7 @@ function vih_long_course_node_info() {
     'vih_long_course' => array(
       'name' => t('Long course'),
       'base' => 'node_content',
-      'description' => t('Use <em>Long course</em> for long courses.'),
+      'description' => t('Use <em>Long course</em> for long courses where you can use webform functionality.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
