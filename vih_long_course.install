@@ -1,0 +1,26 @@
+<?php
+/**
+ * @file
+ */
+
+/**
+ * Implements hook_install().
+ *
+ * See http://dcycleproject.org/node/43
+ */
+function vih_long_course_install() {
+  for ($i = 7000; $i < 8000; $i++) {
+    $candidate = 'vih_long_course_update_' . $i;
+    if (function_exists($candidate)) {
+      $candidate();
+    }
+  }
+}
+
+/**
+ * Implements hook_update_N().
+ * Enable webform functionality for long courses.
+ */
+function vih_long_course_update_7000() {
+  variable_set('webform_node_vih_long_course', TRUE);
+}
