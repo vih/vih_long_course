@@ -29,24 +29,27 @@ function vih_long_course_update_7000() {
  * Implements hook_update_N().
  * Convert previously referenced webforms to the nodes.
  */
-function vih_long_course_update_7001() {
+function vih_long_course_update_7002() {
   // Loading nodes from long courses.
   $nodes = node_load_multiple(array(), array('type' => 'vih_long_course'));
   foreach ($nodes as $node) {
     $wrapper = entity_metadata_wrapper('node', $node);
     $referenced_webform_nid = $wrapper->field_webform->value();
 
-    // Update webform tables directly.
-    $tables = array('webform', 'webform_component', 'webform_conditional', 'webform_conditional_rules',
-      'webform_conditional_actions', 'webform_emails', 'webform_roles', 'webform_submissions', 'webform_submitted_data',
-      'webform_last_download');
-    foreach ($tables as $table) {
-      db_update($table)
-      ->fields(array(
-        'nid' => $node->nid,
-      ))
-      ->condition('nid', $referenced_webform_nid)
-      ->execute();
+    if ($referenced_webform_nid > 0) {
+
+      // Update webform tables directly.
+      $tables = array('webform', 'webform_component', 'webform_conditional', 'webform_conditional_rules',
+        'webform_conditional_actions', 'webform_emails', 'webform_roles', 'webform_submissions', 'webform_submitted_data',
+        'webform_last_download');
+      foreach ($tables as $table) {
+        db_update($table)
+        ->fields(array(
+          'nid' => $node->nid,
+        ))
+        ->condition('nid', $referenced_webform_nid)
+        ->execute();
+      }
     }
   }
 }
