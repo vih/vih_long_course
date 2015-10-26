@@ -29,14 +29,14 @@ function vih_long_course_update_7000() {
  * Implements hook_update_N().
  * Convert previously referenced webforms to the nodes.
  */
-function vih_long_course_update_7002() {
+function vih_long_course_update_7003() {
   // Loading nodes from long courses.
   $nodes = node_load_multiple(array(), array('type' => 'vih_long_course'));
   foreach ($nodes as $node) {
     $wrapper = entity_metadata_wrapper('node', $node);
-    $referenced_webform_nid = $wrapper->field_webform->value();
+    $referenced_webform = $wrapper->field_webform->value();
 
-    if ($referenced_webform_nid > 0) {
+    if ($referenced_webform->nid > 0) {
 
       // Update webform tables directly.
       $tables = array('webform', 'webform_component', 'webform_conditional', 'webform_conditional_rules',
@@ -47,7 +47,7 @@ function vih_long_course_update_7002() {
         ->fields(array(
           'nid' => $node->nid,
         ))
-        ->condition('nid', $referenced_webform_nid)
+        ->condition('nid', $referenced_webform->nid)
         ->execute();
       }
     }
