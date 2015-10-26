@@ -397,7 +397,7 @@ function vih_long_course_default_page_manager_handlers() {
     'view_settings' => 'fields',
     'header_type' => 'none',
     'view_mode' => 'teaser',
-    'widget_title' => 'Undervisere',
+    'widget_title' => 'Spørgsmål til kurset',
   );
   $pane->cache = array();
   $pane->style = array(
@@ -442,29 +442,6 @@ function vih_long_course_default_page_manager_handlers() {
   $pane->uuid = '42f5e612-8d0c-4241-9f39-6be59ff94261';
   $display->content['new-42f5e612-8d0c-4241-9f39-6be59ff94261'] = $pane;
   $display->panels['middle'][8] = 'new-42f5e612-8d0c-4241-9f39-6be59ff94261';
-  $pane = new stdClass();
-  $pane->pid = 'new-2e661177-c355-4c5e-a5ea-883fb631e245';
-  $pane->panel = 'middle';
-  $pane->type = 'entity_field_extra';
-  $pane->subtype = 'node:webform';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'view_mode' => 'full',
-    'context' => 'argument_entity_id:node_1',
-    'override_title' => 0,
-    'override_title_text' => '',
-    'override_title_heading' => 'h2',
-  );
-  $pane->cache = array();
-  $pane->style = array();
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 9;
-  $pane->locks = array();
-  $pane->uuid = '2e661177-c355-4c5e-a5ea-883fb631e245';
-  $display->content['new-2e661177-c355-4c5e-a5ea-883fb631e245'] = $pane;
-  $display->panels['middle'][9] = 'new-2e661177-c355-4c5e-a5ea-883fb631e245';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
