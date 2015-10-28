@@ -415,33 +415,28 @@ function vih_long_course_default_page_manager_handlers() {
   $display->content['new-9b01f59d-4ca4-4186-9a3b-4248ecafb9e6'] = $pane;
   $display->panels['middle'][7] = 'new-9b01f59d-4ca4-4186-9a3b-4248ecafb9e6';
   $pane = new stdClass();
-  $pane->pid = 'new-42f5e612-8d0c-4241-9f39-6be59ff94261';
+  $pane->pid = 'new-6041c636-be01-4ca6-9618-a043367dfe59';
   $pane->panel = 'middle';
-  $pane->type = 'entity_field';
-  $pane->subtype = 'node:field_webform';
+  $pane->type = 'entity_field_extra';
+  $pane->subtype = 'node:webform';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'label' => 'hidden',
-    'formatter' => 'entityreference_entity_view',
-    'formatter_settings' => array(
-      'view_mode' => 'full',
-    ),
+    'view_mode' => 'full',
     'context' => 'argument_entity_id:node_1',
     'override_title' => 0,
     'override_title_text' => '',
+    'override_title_heading' => 'h2',
   );
   $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
+  $pane->style = array();
   $pane->css = array();
   $pane->extras = array();
   $pane->position = 8;
   $pane->locks = array();
-  $pane->uuid = '42f5e612-8d0c-4241-9f39-6be59ff94261';
-  $display->content['new-42f5e612-8d0c-4241-9f39-6be59ff94261'] = $pane;
-  $display->panels['middle'][8] = 'new-42f5e612-8d0c-4241-9f39-6be59ff94261';
+  $pane->uuid = '6041c636-be01-4ca6-9618-a043367dfe59';
+  $display->content['new-6041c636-be01-4ca6-9618-a043367dfe59'] = $pane;
+  $display->panels['middle'][8] = 'new-6041c636-be01-4ca6-9618-a043367dfe59';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
