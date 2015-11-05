@@ -50,6 +50,14 @@ function vih_long_course_update_7001() {
         ->condition('nid', $referenced_webform->nid)
         ->execute();
       }
+
+      // Delete old node.
+      node_delete($referenced_webform->nid);
+
+      watchdog('vih_long_course', 'Long course node id !nid had webform id !webform attached. Data has been transferred to the long course.', array('!nid' => $node->nid, '!webform' => $referenced_webform->nid));
+    }
+    else {
+      watchdog('vih_long_course', 'Long course node id !nid did not have an attached webform. Nothing to do.', array('!nid' => $node->nid));
     }
   }
 }
