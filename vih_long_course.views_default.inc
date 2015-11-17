@@ -313,6 +313,11 @@ function vih_long_course_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
+  /* Field: Webform: Webform submission count */
+  $handler->display->display_options['fields']['webform_submission_count_node']['id'] = 'webform_submission_count_node';
+  $handler->display->display_options['fields']['webform_submission_count_node']['table'] = 'node';
+  $handler->display->display_options['fields']['webform_submission_count_node']['field'] = 'webform_submission_count_node';
+  $handler->display->display_options['fields']['webform_submission_count_node']['label'] = 'Registrations';
   /* Field: Content: Published */
   $handler->display->display_options['fields']['status']['id'] = 'status';
   $handler->display->display_options['fields']['status']['table'] = 'node';
@@ -808,6 +813,7 @@ function vih_long_course_views_default_views() {
     t('Blok'),
     t('Tabel'),
     t('Content pane'),
+    t('Registrations'),
     t('Published'),
     t('VIH Admin'),
     t('Økonomi'),
