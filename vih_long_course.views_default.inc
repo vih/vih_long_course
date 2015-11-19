@@ -830,5 +830,166 @@ function vih_long_course_views_default_views() {
   );
   $export['lange_kurser'] = $view;
 
+  $view = new view();
+  $view->name = 'vih_long_courses_prices';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'VIH Long Courses Prices';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Priser';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'field_material_payment' => 'field_material_payment',
+    'field_travel_payment' => 'field_travel_payment',
+    'field_registration_payment' => 'field_registration_payment',
+    'field_weekly_payment' => 'field_weekly_payment',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'field_material_payment' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_travel_payment' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_registration_payment' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_weekly_payment' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  /* Footer: Global: Text area */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['label'] = 'Instructions on prices when waiting longer';
+  $handler->display->display_options['footer']['area']['content'] = 'Hvis du vælger at forlænge dit ophold ud over et semester, så kan du få nedslag i ugebetalingen. Skriv til os for at høre nærmere.';
+  $handler->display->display_options['footer']['area']['format'] = 'panopoly_wysiwyg_text';
+  $handler->display->display_options['footer']['area']['tokenize'] = TRUE;
+  /* Field: Content: Materialegebyr */
+  $handler->display->display_options['fields']['field_material_payment']['id'] = 'field_material_payment';
+  $handler->display->display_options['fields']['field_material_payment']['table'] = 'field_data_field_material_payment';
+  $handler->display->display_options['fields']['field_material_payment']['field'] = 'field_material_payment';
+  $handler->display->display_options['fields']['field_material_payment']['settings'] = array(
+    'thousand_separator' => '.',
+    'prefix_suffix' => 1,
+  );
+  /* Field: Content: Rejsebetaling */
+  $handler->display->display_options['fields']['field_travel_payment']['id'] = 'field_travel_payment';
+  $handler->display->display_options['fields']['field_travel_payment']['table'] = 'field_data_field_travel_payment';
+  $handler->display->display_options['fields']['field_travel_payment']['field'] = 'field_travel_payment';
+  $handler->display->display_options['fields']['field_travel_payment']['settings'] = array(
+    'thousand_separator' => '.',
+    'prefix_suffix' => 1,
+  );
+  /* Field: Content: Tilmeldingsgebyr */
+  $handler->display->display_options['fields']['field_registration_payment']['id'] = 'field_registration_payment';
+  $handler->display->display_options['fields']['field_registration_payment']['table'] = 'field_data_field_registration_payment';
+  $handler->display->display_options['fields']['field_registration_payment']['field'] = 'field_registration_payment';
+  $handler->display->display_options['fields']['field_registration_payment']['settings'] = array(
+    'thousand_separator' => '.',
+    'prefix_suffix' => 1,
+  );
+  /* Field: Content: Ugebetaling */
+  $handler->display->display_options['fields']['field_weekly_payment']['id'] = 'field_weekly_payment';
+  $handler->display->display_options['fields']['field_weekly_payment']['table'] = 'field_data_field_weekly_payment';
+  $handler->display->display_options['fields']['field_weekly_payment']['field'] = 'field_weekly_payment';
+  $handler->display->display_options['fields']['field_weekly_payment']['settings'] = array(
+    'thousand_separator' => '.',
+    'prefix_suffix' => 1,
+  );
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['nid']['specify_validation'] = TRUE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'vih_long_course' => 'vih_long_course',
+  );
+
+  /* Display: Content pane */
+  $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
+  $handler->display->display_options['pane_category']['name'] = 'VIH Long Courses';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 0;
+  $handler->display->display_options['allow']['panopoly_magic_display_type'] = 0;
+  $handler->display->display_options['argument_input'] = array(
+    'nid' => array(
+      'type' => 'context',
+      'context' => 'entity:node.nid',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Content: Nid',
+    ),
+  );
+  $translatables['vih_long_courses_prices'] = array(
+    t('Master'),
+    t('Priser'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Instructions on prices when waiting longer'),
+    t('Hvis du vælger at forlænge dit ophold ud over et semester, så kan du få nedslag i ugebetalingen. Skriv til os for at høre nærmere.'),
+    t('Materialegebyr'),
+    t('Rejsebetaling'),
+    t('Tilmeldingsgebyr'),
+    t('Ugebetaling'),
+    t('All'),
+    t('Content pane'),
+    t('VIH Long Courses'),
+  );
+  $export['vih_long_courses_prices'] = $view;
+
   return $export;
 }
