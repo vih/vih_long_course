@@ -31,6 +31,8 @@ function vih_long_course_update_7000() {
  */
 function vih_long_course_update_7001() {
   // Loading nodes from long courses.
+  /*
+  // This has already been accomplished on the production site
   $nodes = node_load_multiple(array(), array('type' => 'vih_long_course'));
   foreach ($nodes as $node) {
     $wrapper = entity_metadata_wrapper('node', $node);
@@ -60,41 +62,37 @@ function vih_long_course_update_7001() {
       watchdog('vih_long_course', 'Long course node id !nid did not have an attached webform. Nothing to do.', array('!nid' => $node->nid));
     }
   }
+  */
 }
 
 /**
  * Implements hook_update_N().
- * Convert previously referenced webforms to the nodes.
+ * Convert webforms which was not properly referenced.
  */
-function vih_long_course_update_7001() {
-  // Loading nodes from long courses.
-  $nodes = node_load_multiple(array(), array('type' => 'vih_long_course'));
-  foreach ($nodes as $node) {
-    $wrapper = entity_metadata_wrapper('node', $node);
-    $referenced_webform = $wrapper->field_webform->value();
+function vih_long_course_update_7002() {
+  $references = array(
+    2392 => 2387, // Kort forårskursus 2015
+    2390 => 2386, // Forårskursus 2015
+    2393 => 2385, // Vinterkursus 14/15
+    3617 => 1404, // Helårskursus 13/14
+  );
 
-    if ($referenced_webform->nid > 0) {
-
-      // Update webform tables directly.
-      $tables = array('webform', 'webform_component', 'webform_conditional', 'webform_conditional_rules',
-        'webform_conditional_actions', 'webform_emails', 'webform_roles', 'webform_submissions', 'webform_submitted_data',
-        'webform_last_download');
-      foreach ($tables as $table) {
-        db_update($table)
-        ->fields(array(
-          'nid' => $node->nid,
-        ))
-        ->condition('nid', $referenced_webform->nid)
-        ->execute();
-      }
-
-      // Delete old node.
-      node_delete($referenced_webform->nid);
-
-      watchdog('vih_long_course', 'Long course node id !nid had webform id !webform attached. Data has been transferred to the long course.', array('!nid' => $node->nid, '!webform' => $referenced_webform->nid));
+  foreach ($references as $course_id => $webform_id) {
+    // Update webform tables directly.
+    $tables = array('webform', 'webform_component', 'webform_conditional', 'webform_conditional_rules',
+      'webform_conditional_actions', 'webform_emails', 'webform_roles', 'webform_submissions', 'webform_submitted_data',
+      'webform_last_download');
+    foreach ($tables as $table) {
+      db_update($table)
+      ->fields(array(
+        'nid' => $course_id,
+      ))
+      ->condition('nid', $webform_id)
+      ->execute();
     }
-    else {
-      watchdog('vih_long_course', 'Long course node id !nid did not have an attached webform. Nothing to do.', array('!nid' => $node->nid));
-    }
+
+    // Delete old node.
+    node_delete($webform_id);
+
   }
 }
