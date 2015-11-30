@@ -41,7 +41,6 @@ features[field_instance][] = node-vih_long_course-field_material_payment
 features[field_instance][] = node-vih_long_course-field_picture
 features[field_instance][] = node-vih_long_course-field_registration_payment
 features[field_instance][] = node-vih_long_course-field_travel_payment
-features[field_instance][] = node-vih_long_course-field_webform
 features[field_instance][] = node-vih_long_course-field_weekly_payment
 features[node][] = vih_long_course
 features[page_manager_handlers][] = node_view_panel_context_4
