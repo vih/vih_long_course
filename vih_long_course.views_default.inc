@@ -506,6 +506,11 @@ function vih_long_course_views_default_views() {
     'multiple_to' => '',
     'show_repeat_rule' => 'show',
   );
+  /* Field: Webform: Webform submission count */
+  $handler->display->display_options['fields']['webform_submission_count_node']['id'] = 'webform_submission_count_node';
+  $handler->display->display_options['fields']['webform_submission_count_node']['table'] = 'node';
+  $handler->display->display_options['fields']['webform_submission_count_node']['field'] = 'webform_submission_count_node';
+  $handler->display->display_options['fields']['webform_submission_count_node']['label'] = 'Registrations';
   /* Field: Content: Published */
   $handler->display->display_options['fields']['status']['id'] = 'status';
   $handler->display->display_options['fields']['status']['table'] = 'node';
@@ -727,9 +732,9 @@ function vih_long_course_views_default_views() {
     t('Tilmeldingsgebyr'),
     t('Ugebetaling'),
     t('Admin page'),
+    t('Registrations'),
     t('Published'),
     t('Admin pane'),
-    t('Registrations'),
     t('VIH Admin'),
     t('Feed'),
   );
