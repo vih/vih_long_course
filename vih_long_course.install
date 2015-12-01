@@ -104,6 +104,8 @@ function vih_long_course_update_7002() {
  * Convert webforms which was not properly referenced.
  */
 function vih_long_course_update_7003() {
+  /*
+  // This has been done in production - and is therefore outcommented.
   $references = array(
     3617 => 1404, // Helårskursus 13/14
   );
@@ -127,4 +129,5 @@ function vih_long_course_update_7003() {
     // Delete old node.
     node_delete($webform_id);
   }
+  */
 }
