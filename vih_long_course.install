@@ -70,15 +70,48 @@ function vih_long_course_update_7001() {
  * Convert webforms which was not properly referenced.
  */
 function vih_long_course_update_7002() {
+  /*
+  // It is not possible to move this so easily, because of nid_serial.
+  // Therefore I outcommented this. Maybe it can be done later.
   $references = array(
     2392 => 2387, // Kort forårskursus 2015
     2390 => 2386, // Forårskursus 2015
     2393 => 2385, // Vinterkursus 14/15
+  );
+
+  foreach ($references as $course_id => $webform_id) {
+    // Update webform tables directly.
+    watchdog('vih_long_course', 'Long course node id !nid gets webform id !webform transferred.', array('!nid' => $course_id, '!webform' => $webform_id));
+
+    $tables = array('webform_submissions', 'webform_submitted_data');
+    foreach ($tables as $table) {
+      db_update($table)
+      ->fields(array(
+        'nid' => $course_id,
+      ))
+      ->condition('nid', $webform_id)
+      ->execute();
+    }
+
+    // Delete old node.
+    node_delete($webform_id);
+  }
+  */
+}
+
+/**
+ * Implements hook_update_N().
+ * Convert webforms which was not properly referenced.
+ */
+function vih_long_course_update_7003() {
+  $references = array(
     3617 => 1404, // Helårskursus 13/14
   );
 
   foreach ($references as $course_id => $webform_id) {
     // Update webform tables directly.
+    watchdog('vih_long_course', 'Long course node id !nid gets webform id !webform transferred.', array('!nid' => $course_id, '!webform' => $webform_id));
+
     $tables = array('webform', 'webform_component', 'webform_conditional', 'webform_conditional_rules',
       'webform_conditional_actions', 'webform_emails', 'webform_roles', 'webform_submissions', 'webform_submitted_data',
       'webform_last_download');
@@ -93,6 +126,5 @@ function vih_long_course_update_7002() {
 
     // Delete old node.
     node_delete($webform_id);
-
   }
 }
