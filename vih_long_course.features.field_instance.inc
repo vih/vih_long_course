@@ -345,7 +345,6 @@ function vih_long_course_field_default_field_instances() {
           'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
           'media_internet' => 0,
           'upload' => 'upload',
-          'youtube' => 0,
         ),
         'manualcrop_crop_info' => 1,
         'manualcrop_default_crop_area' => 1,
@@ -355,9 +354,7 @@ function vih_long_course_field_default_field_instances() {
         'manualcrop_instant_preview' => 1,
         'manualcrop_keyboard' => 1,
         'manualcrop_maximize_default_crop_area' => 0,
-        'manualcrop_require_cropping' => array(
-          'vih_banner' => 'vih_banner',
-        ),
+        'manualcrop_require_cropping' => array(),
         'manualcrop_styles_list' => array(
           'panopoly_image_square' => 'panopoly_image_square',
           'vih_banner' => 'vih_banner',
@@ -565,7 +562,6 @@ function vih_long_course_field_default_field_instances() {
   t('Periode');
   t('Rejsebetaling');
   t('Spørgsmål');
-  t('Tilmelding');
   t('Tilmeldingsgebyr');
   t('Ugebetaling');
 
