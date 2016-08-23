@@ -243,7 +243,7 @@ function vih_long_course_views_default_views() {
   $handler->display->display_options['filters']['field_course_time_value']['table'] = 'field_data_field_course_time';
   $handler->display->display_options['filters']['field_course_time_value']['field'] = 'field_course_time_value';
   $handler->display->display_options['filters']['field_course_time_value']['operator'] = '>=';
-  $handler->display->display_options['filters']['field_course_time_value']['default_date'] = '-30 days';
+  $handler->display->display_options['filters']['field_course_time_value']['default_date'] = '-14 days';
   $handler->display->display_options['filters']['field_course_time_value']['year_range'] = '-1:+3';
   $handler->display->display_options['pane_category']['name'] = 'VIH Long Courses';
   $handler->display->display_options['pane_category']['weight'] = '0';
@@ -349,19 +349,19 @@ function vih_long_course_views_default_views() {
     'multiple_to' => '',
     'show_repeat_rule' => 'show',
   );
+  /* Field: Content: Ugebetaling */
+  $handler->display->display_options['fields']['field_weekly_payment']['id'] = 'field_weekly_payment';
+  $handler->display->display_options['fields']['field_weekly_payment']['table'] = 'field_data_field_weekly_payment';
+  $handler->display->display_options['fields']['field_weekly_payment']['field'] = 'field_weekly_payment';
+  $handler->display->display_options['fields']['field_weekly_payment']['settings'] = array(
+    'thousand_separator' => '.',
+    'prefix_suffix' => 1,
+  );
   /* Field: Content: Materialegebyr */
   $handler->display->display_options['fields']['field_material_payment']['id'] = 'field_material_payment';
   $handler->display->display_options['fields']['field_material_payment']['table'] = 'field_data_field_material_payment';
   $handler->display->display_options['fields']['field_material_payment']['field'] = 'field_material_payment';
   $handler->display->display_options['fields']['field_material_payment']['settings'] = array(
-    'thousand_separator' => '.',
-    'prefix_suffix' => 1,
-  );
-  /* Field: Content: Rejsebetaling */
-  $handler->display->display_options['fields']['field_travel_payment']['id'] = 'field_travel_payment';
-  $handler->display->display_options['fields']['field_travel_payment']['table'] = 'field_data_field_travel_payment';
-  $handler->display->display_options['fields']['field_travel_payment']['field'] = 'field_travel_payment';
-  $handler->display->display_options['fields']['field_travel_payment']['settings'] = array(
     'thousand_separator' => '.',
     'prefix_suffix' => 1,
   );
@@ -373,11 +373,11 @@ function vih_long_course_views_default_views() {
     'thousand_separator' => '.',
     'prefix_suffix' => 1,
   );
-  /* Field: Content: Ugebetaling */
-  $handler->display->display_options['fields']['field_weekly_payment']['id'] = 'field_weekly_payment';
-  $handler->display->display_options['fields']['field_weekly_payment']['table'] = 'field_data_field_weekly_payment';
-  $handler->display->display_options['fields']['field_weekly_payment']['field'] = 'field_weekly_payment';
-  $handler->display->display_options['fields']['field_weekly_payment']['settings'] = array(
+  /* Field: Content: Rejsebetaling */
+  $handler->display->display_options['fields']['field_travel_payment']['id'] = 'field_travel_payment';
+  $handler->display->display_options['fields']['field_travel_payment']['table'] = 'field_data_field_travel_payment';
+  $handler->display->display_options['fields']['field_travel_payment']['field'] = 'field_travel_payment';
+  $handler->display->display_options['fields']['field_travel_payment']['settings'] = array(
     'thousand_separator' => '.',
     'prefix_suffix' => 1,
   );
@@ -403,7 +403,7 @@ function vih_long_course_views_default_views() {
   $handler->display->display_options['filters']['field_course_time_value']['table'] = 'field_data_field_course_time';
   $handler->display->display_options['filters']['field_course_time_value']['field'] = 'field_course_time_value';
   $handler->display->display_options['filters']['field_course_time_value']['operator'] = '>';
-  $handler->display->display_options['filters']['field_course_time_value']['default_date'] = '-21 day';
+  $handler->display->display_options['filters']['field_course_time_value']['default_date'] = '-7 day';
   $handler->display->display_options['filters']['field_course_time_value']['year_range'] = '-0:+4';
   $handler->display->display_options['pane_category']['name'] = 'VIH Long Courses';
   $handler->display->display_options['pane_category']['weight'] = '0';
@@ -727,10 +727,10 @@ function vih_long_course_views_default_views() {
     t('VIH Long Courses'),
     t('Economy pane'),
     t('Prisoversigt lange kurser'),
-    t('Materialegebyr'),
-    t('Rejsebetaling'),
-    t('Tilmeldingsgebyr'),
     t('Ugebetaling'),
+    t('Materialegebyr'),
+    t('Tilmeldingsgebyr'),
+    t('Rejsebetaling'),
     t('Admin page'),
     t('Registrations'),
     t('Published'),

@@ -10,7 +10,7 @@
 function vih_long_course_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-vih_long_course-body'
+  // Exported field_instance: 'node-vih_long_course-body'.
   $field_instances['node-vih_long_course-body'] = array(
     'bundle' => 'vih_long_course',
     'default_value' => NULL,
@@ -66,7 +66,7 @@ function vih_long_course_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-vih_long_course-field_course_leader'
+  // Exported field_instance: 'node-vih_long_course-field_course_leader'.
   $field_instances['node-vih_long_course-field_course_leader'] = array(
     'bundle' => 'vih_long_course',
     'default_value' => NULL,
@@ -125,7 +125,7 @@ function vih_long_course_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-vih_long_course-field_course_time'
+  // Exported field_instance: 'node-vih_long_course-field_course_time'.
   $field_instances['node-vih_long_course-field_course_time'] = array(
     'bundle' => 'vih_long_course',
     'deleted' => 0,
@@ -209,7 +209,7 @@ function vih_long_course_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-vih_long_course-field_material_payment'
+  // Exported field_instance: 'node-vih_long_course-field_material_payment'.
   $field_instances['node-vih_long_course-field_material_payment'] = array(
     'bundle' => 'vih_long_course',
     'default_value' => array(
@@ -271,7 +271,7 @@ function vih_long_course_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-vih_long_course-field_picture'
+  // Exported field_instance: 'node-vih_long_course-field_picture'.
   $field_instances['node-vih_long_course-field_picture'] = array(
     'bundle' => 'vih_long_course',
     'deleted' => 0,
@@ -368,7 +368,7 @@ function vih_long_course_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-vih_long_course-field_registration_payment'
+  // Exported field_instance: 'node-vih_long_course-field_registration_payment'.
   $field_instances['node-vih_long_course-field_registration_payment'] = array(
     'bundle' => 'vih_long_course',
     'default_value' => array(
@@ -430,7 +430,7 @@ function vih_long_course_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-vih_long_course-field_travel_payment'
+  // Exported field_instance: 'node-vih_long_course-field_travel_payment'.
   $field_instances['node-vih_long_course-field_travel_payment'] = array(
     'bundle' => 'vih_long_course',
     'default_value' => array(
@@ -492,7 +492,7 @@ function vih_long_course_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-vih_long_course-field_weekly_payment'
+  // Exported field_instance: 'node-vih_long_course-field_weekly_payment'.
   $field_instances['node-vih_long_course-field_weekly_payment'] = array(
     'bundle' => 'vih_long_course',
     'default_value' => array(
