@@ -70,5 +70,20 @@ function vih_long_course_field_default_field_bases() {
     'type' => 'number_integer',
   );
 
+  // Exported field_base: 'field_weeks'.
+  $field_bases['field_weeks'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_weeks',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'number',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'number_integer',
+  );
+
   return $field_bases;
 }

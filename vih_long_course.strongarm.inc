@@ -37,6 +37,9 @@ function vih_long_course_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'featured' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -50,13 +53,28 @@ function vih_long_course_strongarm() {
           'weight' => '9',
         ),
         'xmlsitemap' => array(
-          'weight' => '11',
+          'weight' => '10',
         ),
         'path' => array(
           'weight' => '8',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'webform' => array(
+          'default' => array(
+            'weight' => '5',
+            'visible' => TRUE,
+          ),
+          'rss' => array(
+            'weight' => '2',
+            'visible' => FALSE,
+          ),
+          'featured' => array(
+            'weight' => '1',
+            'visible' => FALSE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__vih_long_course'] = $strongarm;
